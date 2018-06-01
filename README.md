@@ -1,6 +1,6 @@
 # Kntnt's Email Marketing Bundle for Mautic
 
-Provides integration to the newsletter service EditNews 
+Provides integration to the newsletter service [EditNews](https://www.multinet.com/en/editnews/).
 
 ## Installation
 
