@@ -26,6 +26,7 @@ class EditnewsIntegration extends EmailAbstractIntegration {
   }
 
   public function getRequiredKeyFields() {
+    $this->keys['username'] = "NONE"; // EditNews don't require user name
     return [ 'password' => 'mautic.integration.keyfield.api' ];
   }
 
