@@ -12,7 +12,7 @@ This plugin have some requirements…
 
 1. Working Mautic 2.13.1 or later installation.
 2. Mautic must run on PHP7.
-3. You must have [PHP's SOAP extension](http://php.net/manual/en/book.soap.php) installed. To install it on Ubuntu and derivatives (e.g. Kubuntu) run `sudo apt install php7.0-soap` in the terminal. On RedHat and derivatives (e.g. Fedora and Centos run `yum install php-soap`. Restart Apache, PHP-FPM, PHP FastCGI or whatever you use to manage your PHP processes.
+3. You must have [PHP's SOAP extension](http://php.net/manual/en/book.soap.php) installed. To install it on Ubuntu and derivatives (e.g. Kubuntu) run `sudo apt install php7.0-soap` in the terminal. On RedHat and derivatives (e.g. Fedora and Centos) run `yum install php-soap`. Restart Apache, PHP-FPM, PHP FastCGI or whatever you use to manage your PHP processes.
 
 ## Installation
 
