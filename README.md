@@ -31,10 +31,8 @@ Before configuring the plugin, make sure you have following information at hand:
 
 1. Your EditNews API key. If you don't have one,  contact [EditNews support](https://support.editnews.com/support/tickets/new) and ask for an API key.
 2. The EditNews name of the address list onto which you want the plugin to push contacts.
-3. The EditNews name of the welcome letter (i.e. verification of subscription email) to be sent for double opt-in.
-4. The EditNews name of the sender of the welcome letter.
 
-With this information yu can follow these step-by-step instructions to configure the plugin:
+With this information you can follow these step-by-step instructions to configure the plugin:
 
 1. Log in to Mautic. Click the gear icon in the upper right corner. Choose Click *Plugins* from the menu appearing.
 2. Click on the EditNews plugin.
@@ -43,7 +41,29 @@ With this information yu can follow these step-by-step instructions to configure
 5. Go to the tab *Contact Mapping* and select a Mautic fields for each Integration field. Only the *Email* field is mandatory.
 6. Click on the *Save & Close* button.
 
+## Usage
+
+Before you push a contact to EditNews, maje sure you have following information at hand:
+
+1. The EditNews name of the address list onto which you want the plugin to push contacts.
+2. The EditNews name of the welcome letter on successful sign up.
+3. The EditNews name of the sender of the welcome letter.
+
+With this information you can follow these step-by-step instructions to make use of the plugin:
+
+1. Add a *Push contect to integration* action to a campaign or form in Amutic.
+2. Give the action a name, e.g. Push to EditNews, and optionally write a description.
+3. Klick in the *Integration* filed and select EditNews.
+4. Click in the *List* field and select the name of the list to which you want to push the contact.
+5. Enter an proper URL, e.g. [https://www.kntnt.se/](https://www.kntnt.se/), to the page to which you want contacts to be redirected once they have verified their subscription.
+6. Click in the *Welcome letter* field and select the name of the welcome letter you want to be sent to new contacts once they have verified their email address. You can leave this field empty.
+7. Click in the *Welcome letter* field and select the name of the sender of the welcome letter.
+
 ## Frequently Asked Questions
+
+### Why can't I select a verification email?
+
+Currently, EditNews API don't provide means to select a verification email. The standard verification emai is sent instead.
 
 ### It doesn't work! What to do?
 
@@ -69,6 +89,10 @@ If you are familiar with Git, please do a pull request.
 
 ## Changelog
 
+### 1.0.2
+
+* Updated documentation.
+
 ### 1.0.1
 
 * Fixed bug: Mautic requires a dummy username together with password.
@@ -76,4 +100,4 @@ If you are familiar with Git, please do a pull request.
 
 ### 1.0.0
 
-Initial release. Fully functional bundle.
+* Initial release. Fully functional bundle.
