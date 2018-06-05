@@ -56,11 +56,12 @@ class EditnewsApi extends EmailMarketingApi {
     return $letters;
   }
 
-  public function add_recepient_to_list( $address, $list, $verify_url, $welcome_issue, $sender ) {
+  public function add_recepient_to_list( $address, $list, $verify_subject, $verify_url, $welcome_issue, $sender ) {
     $this->soap_call( 'RecipientVerifiedSubscribe', [
       'address' => $this->create_address( $address ),
       'lists'   => [ $this->create_list( $list ) ],
       'extra'   => [
+        $this->create_field( 'verifysubject', $verify_subject ),
         $this->create_field( 'verifyurl', $verify_url ),
         $this->create_field( 'welcomeissue', $welcome_issue ),
         $this->create_field( 'senderid', $sender ),

@@ -62,20 +62,12 @@ class EditnewsType extends AbstractType {
       ],
     ] );
 
-    try {
-      $choices = $api->get_senders();
-    }
-    catch ( \Exception $e ) {
-      $choices = [];
-      $error = $e->getMessage();
-    }
-
-    $builder->add( 'sender', 'choice', [
-      'choices'  => $choices,
-      'label'    => 'kntnt.emailmarketing.sender',
-      'required' => false,
-      'attr'     => [
-        'tooltip'  => 'kntnt.emailmarketing.sender.tooltip',
+    $builder->add( 'verify_subject', 'text', [
+      'label'    => 'kntnt.emailmarketing.verify_subject',
+      'required'   => false,
+      'attr'       => [
+        'class'   => 'form-control',
+        'tooltip'  => 'kntnt.emailmarketing.verify_subject.tooltip',
       ],
     ] );
 
@@ -84,7 +76,7 @@ class EditnewsType extends AbstractType {
       'required'   => false,
       'attr'       => [
         'class'   => 'form-control',
-        'tooltip'  => 'kntnt.emailmarketing.sender.verify_url',
+        'tooltip'  => 'kntnt.emailmarketing.verify_url.tooltip',
       ],
     ] );
 
@@ -102,6 +94,23 @@ class EditnewsType extends AbstractType {
       'required' => false,
       'attr'     => [
         'tooltip'  => 'kntnt.emailmarketing.welcome_letter.tooltip',
+      ],
+    ] );
+
+    try {
+      $choices = $api->get_senders();
+    }
+    catch ( \Exception $e ) {
+      $choices = [];
+      $error = $e->getMessage();
+    }
+
+    $builder->add( 'sender', 'choice', [
+      'choices'  => $choices,
+      'label'    => 'kntnt.emailmarketing.sender',
+      'required' => false,
+      'attr'     => [
+        'tooltip'  => 'kntnt.emailmarketing.sender.tooltip',
       ],
     ] );
 

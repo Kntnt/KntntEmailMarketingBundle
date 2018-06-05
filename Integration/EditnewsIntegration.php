@@ -91,12 +91,13 @@ class EditnewsIntegration extends EmailAbstractIntegration {
     if ( ! $address || ! isset( $address['email'] ) || ! isset( $config['list_settings'] ) ) return false;
 
     $list = $config['list_settings']['list'];
-    $welcome_letter = $config['list_settings']['welcome_letter'];
-    $sender = $config['list_settings']['sender'];
+    $verify_subject = $config['list_settings']['verify_subject'];
     $verify_url = $config['list_settings']['verify_url'];
+    $welcome_issue = $config['list_settings']['welcome_letter'];
+    $sender = $config['list_settings']['sender'];
 
     try {
-      $this->getApiHelper()->add_recepient_to_list( $address, $list, $verify_url, $welcome_letter, $sender );
+      $this->getApiHelper()->add_recepient_to_list( $address, $list, $verify_subject, $verify_url, $welcome_issue, $sender );
       return true;
     }
     catch ( \Exception $e ) {
