@@ -52,18 +52,20 @@ Before you push a contact to EditNews, make sure you have following information 
 With this information you can follow these step-by-step instructions to make use of the plugin:
 
 1. Add a *Push contect to integration* action to a campaign or form in Mautic.
-2. Give the action a name, e.g. Push to EditNews, and optionally write a description.
-3. Klick in the *Integration* filed and select EditNews.
-4. Click in the *List* field and select the name of the list to which you want to push the contact.
-5. Enter a proper URL of the page to which you want contacts to be redirected once they have verified their subscription.
-6. Click in the *Welcome letter* field and select the name of the welcome letter you want to be sent to new contacts once they have verified their email address. You can leave this field empty.
-7. Click in the *Welcome letter* field and select the name of the sender of the welcome letter.
+2. Enter a name, e.g. "Push to EditNews".
+3. Enter an optionally description.
+4. Click in the *Integration* filed and select EditNews.
+5. Click in the *List* field and select the name of the list to which you want to push the contact.
+6. Enter the subjectline of the verification email sent.
+7. Enter the URL of the page to which you want contacts to be redirected once they have verified their subscription.
+8. Click in the *Welcome letter* field and select the name of the welcome letter you want to be sent to new contacts once they have verified their email address. You can leave this field empty.
+9. Click in the *Sender* field and select the name of the sender of the welcome letter.
 
 ## Frequently Asked Questions
 
 ### Why can't I select a verification email?
 
-Currently, EditNews API don't provide means to select a verification email. The standard verification emai is sent instead.
+Currently, EditNews API don't provide means to select a verification email. A standard verification emai is sent instead.
 
 ### It doesn't work! What to do?
 
@@ -88,6 +90,11 @@ If you are unfamiliar with Git, please date it as a new issue on the plugin's [i
 If you are familiar with Git, please do a pull request.
 
 ## Changelog
+
+### 1.0.3
+
+* Added verify subject field.
+* Updated documentation.
 
 ### 1.0.2
 
