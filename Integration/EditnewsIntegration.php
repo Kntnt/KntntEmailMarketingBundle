@@ -55,13 +55,13 @@ class EditnewsIntegration extends EmailAbstractIntegration {
     }
 
     $lead_fields['email'] = [
-      'label'    => 'Email', // TODO: Translate
+      'label'    => $this->translator->trans( 'kntnt.emailmarketing.field.email' ),
       'type'     => 'string',
       'required' => true,
     ];
 
     $lead_fields['name'] = [
-      'label'    => 'Name', // TODO: Translate
+      'label'    => $this->translator->trans( 'kntnt.emailmarketing.field.name' ),
       'type'     => 'string',
       'required' => false,
     ];
