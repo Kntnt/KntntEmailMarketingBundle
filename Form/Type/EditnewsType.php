@@ -63,23 +63,6 @@ class EditnewsType extends AbstractType {
     ] );
 
     try {
-      $choices = $api->get_welcome_letters();
-    }
-    catch ( \Exception $e ) {
-      $choices = [];
-      $error = $e->getMessage();
-    }
-
-    $builder->add( 'welcome_letter', 'choice', [
-      'choices'  => $choices,
-      'label'    => 'kntnt.emailmarketing.welcome_letter',
-      'required' => false,
-      'attr'     => [
-        'tooltip'  => 'kntnt.emailmarketing.welcome_letter.tooltip',
-      ],
-    ] );
-
-    try {
       $choices = $api->get_senders();
     }
     catch ( \Exception $e ) {
@@ -102,6 +85,23 @@ class EditnewsType extends AbstractType {
       'attr'       => [
         'class'   => 'form-control',
         'tooltip'  => 'kntnt.emailmarketing.sender.verify_url',
+      ],
+    ] );
+
+    try {
+      $choices = $api->get_welcome_letters();
+    }
+    catch ( \Exception $e ) {
+      $choices = [];
+      $error = $e->getMessage();
+    }
+
+    $builder->add( 'welcome_letter', 'choice', [
+      'choices'  => $choices,
+      'label'    => 'kntnt.emailmarketing.welcome_letter',
+      'required' => false,
+      'attr'     => [
+        'tooltip'  => 'kntnt.emailmarketing.welcome_letter.tooltip',
       ],
     ] );
 
