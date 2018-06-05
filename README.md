@@ -43,7 +43,7 @@ With this information you can follow these step-by-step instructions to configur
 
 ## Usage
 
-Before you push a contact to EditNews, maje sure you have following information at hand:
+Before you push a contact to EditNews, make sure you have following information at hand:
 
 1. The EditNews name of the address list onto which you want the plugin to push contacts.
 2. The EditNews name of the welcome letter on successful sign up.
@@ -51,11 +51,11 @@ Before you push a contact to EditNews, maje sure you have following information 
 
 With this information you can follow these step-by-step instructions to make use of the plugin:
 
-1. Add a *Push contect to integration* action to a campaign or form in Amutic.
+1. Add a *Push contect to integration* action to a campaign or form in Mautic.
 2. Give the action a name, e.g. Push to EditNews, and optionally write a description.
 3. Klick in the *Integration* filed and select EditNews.
 4. Click in the *List* field and select the name of the list to which you want to push the contact.
-5. Enter an proper URL, e.g. [https://www.kntnt.se/](https://www.kntnt.se/), to the page to which you want contacts to be redirected once they have verified their subscription.
+5. Enter a proper URL of the page to which you want contacts to be redirected once they have verified their subscription.
 6. Click in the *Welcome letter* field and select the name of the welcome letter you want to be sent to new contacts once they have verified their email address. You can leave this field empty.
 7. Click in the *Welcome letter* field and select the name of the sender of the welcome letter.
 
